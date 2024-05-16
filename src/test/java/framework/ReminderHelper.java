@@ -1,6 +1,5 @@
 package framework;
 
-import com.google.common.base.Objects;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
@@ -182,11 +181,12 @@ public class ReminderHelper extends BaseHelper {
         tap(textLicense,5);
     }
 
-//    public boolean verifyLicenseTextDisplays(String expectedRes) {
-//        String actualRes = getText(By.id("scroll_view"),5);
-//        return actualRes.contains(expectedRes);
-//
-//    }
+    public boolean verifyLicenseTextDisplays(String expectedRes) {
+        String actualRes = getText(By.id("licenses_text_view"),5);
+        System.out.println(expectedRes);
+        return actualRes.contains(expectedRes);
+
+    }
 
     public void tapBackToReminderBtn() {
         tap(btnNavigateUp,5);

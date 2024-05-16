@@ -24,7 +24,7 @@ public class MainScreenTests extends BaseTest {
     public void checkTheLicense() {
          app.getReminderHelper().tapMoreOptionsBtn();
          app.getReminderHelper().chooseLicenseOption();
-//         Assert.assertTrue(app.getReminderHelper().verifyLicenseTextDisplays());
+         Assert.assertTrue(app.getReminderHelper().verifyLicenseTextDisplays("Licenses"));
          app.getReminderHelper().tapBackToReminderBtn();
     }
 
