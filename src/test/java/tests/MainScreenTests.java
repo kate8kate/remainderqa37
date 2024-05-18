@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,7 +26,10 @@ public class MainScreenTests extends BaseTest {
          app.getReminderHelper().tapMoreOptionsBtn();
          app.getReminderHelper().chooseLicenseOption();
          Assert.assertTrue(app.getReminderHelper().verifyLicenseTextDisplays("Licenses"));
-         app.getReminderHelper().tapBackToReminderBtn();
+    }
+    @AfterMethod
+    public void quit() {
+        app.getReminderHelper().tapBackToReminderBtn();
     }
 
 }
